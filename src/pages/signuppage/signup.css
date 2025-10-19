@@ -1,0 +1,128 @@
+/* 🌑 Netflix Sign-In Page Style */
+.signupScreen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("../../assets/netflixteaser.png") center center / cover
+    no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+/* Dark overlay for cinematic look */
+.signupScreen__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.462);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.638) 0%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+/* Form container */
+.signupScreen form {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 60px 68px 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signupScreen h1 {
+  font-size: 2rem;
+  margin-bottom: 28px;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Input fields */
+.signupScreen input {
+  height: 50px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: #fff;
+  padding: 0 16px;
+  font-size: 1rem;
+}
+
+.signupScreen input:focus {
+  background: #454545;
+}
+
+/* Sign In button */
+.signupScreen button {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signupScreen button:hover {
+  background-color: #f40612;
+}
+
+/* Footer text */
+.signupScreen h4 {
+  color: #737373;
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.signupScreen__gray {
+  color: #b3b3b3;
+}
+
+.signupScreen__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.signupScreen__link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .signupScreen form {
+    width: 90%;
+    padding: 40px 30px;
+  }
+
+  .signupScreen h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signupScreen form {
+    width: 92%;
+    padding: 30px 20px;
+  }
+
+  .signupScreen h1 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,196 @@
+/* ==========================
+   Netflix Navbar Styling
+========================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 10px 10px;
+  background: transparent; /* starts transparent */
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+.navbar:hover {
+  cursor:pointer;
+}
+/* Background when scrolling */
+.nav_black {
+  background-color: #111; /* Netflix black */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Inner container */
+.navcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Netflix logo */
+.logonetflix {
+  height: 75px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logonetflix:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation links */
+.navlinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  margin-left:-500px;
+}
+
+.navlinks a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.20rem;
+  text-decoration: none;
+  font-family: "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navlinks a:hover {
+  color: #e50914; /* Netflix red */
+  transform: scale(1.1);
+}
+
+/* Right section (search, notifications, profile) */
+.nav_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search + Children + Bell */
+.line {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Icons inside line (search, bell) */
+.line img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1); /* white icons */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.line img:hover {
+  transform: scale(1.1);
+}
+
+/* “Children” link */
+.line a {
+  color: #fff;
+  font-size: 1.20rem;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.line a:hover {
+  color: #e50914;
+  transform: scale(1.05);
+}
+
+/* Profile link (profile image + arrow) */
+.nav_right > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Profile logo */
+.profilelogo {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  margin-right:10px;
+}
+
+.profilelogo:hover {
+  transform: scale(1.05);
+}
+
+/* Down arrow beside profile */
+.downarrow {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+  margin-right:30px;
+}
+
+.downarrow:hover {
+  transform: scale(1.2);
+}
+
+/* Hover glow on navbar links/icons (subtle Netflix vibe) */
+.nav_right img:hover,
+.profilelogo:hover,
+.navlinks a:hover {
+  filter: drop-shadow(0 0 5px rgba(229, 9, 20, 0.5));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navlinks {
+    gap: 18px;
+    margin-left: 0;
+  }
+
+  .navlinks a {
+    font-size: 1rem;
+  }
+
+  .logonetflix {
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navlinks {
+    display: none; /* hide middle links on smaller screens */
+  }
+
+  .navcontainer {
+    padding: 10px 20px;
+  }
+
+  .line a {
+    display: none; /* hide "Children" text */
+  }
+}
+
+@media (max-width: 480px) {
+  .logonetflix {
+    height: 48px;
+  }
+
+  .nav_right {
+    gap: 12px;
+  }
+
+  .line img {
+    width: 18px;
+    height: 18px;
+  }
+}

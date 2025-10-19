@@ -1,0 +1,227 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+/* === Banner Container === */
+.banner {
+  position: relative;
+  height: 90vh;
+  color: #fff;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 10px;
+  background-position: center center;
+  background-size: cover;
+  transition: background-image 1.2s ease-in-out;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  animation: fadeInBanner 1.5s ease-in-out;
+}
+
+
+.banner_buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.banner_button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.2vw;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* 🔴 Netflix-style Play button */
+.banner_button:first-child {
+  background-color: #fff;
+  color: #000;
+}
+
+.banner_button:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* ⚫ Netflix-style My List button */
+.banner_button:last-child {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+.banner_button:last-child:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* 🖼️ Image inside buttons */
+.banner_button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+
+/* Smooth fade animation for banner appearance */
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Overlay Dark Gradient === */
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 10%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* === Banner Content === */
+.banner_contents {
+  position: relative;
+  z-index: 2;
+  max-width: 45rem;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+  animation: fadeInText 1.5s ease;
+  padding:20px;
+}
+
+/* Fade-in text animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Title === */
+.banner_title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* === Description === */
+.banner_description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 480px;
+  color: #e5e5e5;
+  margin-top: 1rem;
+  opacity: 0.9;
+}
+
+/* === Buttons === */
+.banner_buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.banner_button {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 0.3vw;
+  padding: 0.7rem 2.2rem;
+  background-color: rgba(51, 51, 51, 0.7);
+  transition: all 0.3s ease;
+}
+
+.banner_button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transform: translateY(-3px);
+}
+
+/* === Fade at bottom of b*
+*/
+
+
+/* --- Add this to the end of banner.css --- */
+.banner_fadeBottom {
+  position: absolute;
+  bottom: 0;
+  height: 7.4rem;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .banner_title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .banner_title {
+    font-size: 2.2rem;
+  }
+
+  .banner_description {
+    font-size: 0.95rem;
+    max-width: 380px;
+  }
+
+  .banner_buttons {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 60vh;
+    padding: 16px;
+  }
+
+  .banner_title {
+    font-size: 1.8rem;
+  }
+
+  .banner_description {
+    font-size: 0.9rem;
+    max-width: 320px;
+  }
+
+  .banner_button {
+    padding: 0.5rem 1rem;
+  }
+}
