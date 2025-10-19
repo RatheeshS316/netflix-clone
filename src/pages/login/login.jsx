@@ -73,7 +73,7 @@ const Login = () => {
             <option>English</option>
             <option>हिन्दी</option>
           </select>
-          <Link className="loginScreen__button" to="/signin">Sign In</Link>
+          <Link className="loginScreen__button" to="/signin"  style={{textDecoration:"none"}}>Sign In</Link>
         </div>
       </div>
 
