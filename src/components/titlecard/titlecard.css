@@ -22,7 +22,7 @@
 .tc-container h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   margin-left: 15px;
   font-family: "Poppins", Arial, sans-serif;
 }
@@ -56,7 +56,7 @@
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0px 0;
+  margin: 25px 0;
 }
 
 .tc-card p {
