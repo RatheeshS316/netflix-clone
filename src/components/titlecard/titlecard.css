@@ -22,7 +22,7 @@
 .tc-container h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  margin-bottom: 0px;
+  margin-bottom: 19px;
   margin-left: 15px;
   font-family: "Poppins", Arial, sans-serif;
 }
@@ -33,7 +33,7 @@
   gap: 18px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .tc-img::-webkit-scrollbar {
@@ -60,11 +60,11 @@
 }
 
 .tc-card p {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #e5e5e5;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 0px;
   font-family: "Poppins", sans-serif;
 }
 
